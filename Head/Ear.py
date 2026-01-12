@@ -12,6 +12,9 @@ def print_loop():
         print(Style.RESET_ALL,end="",flush=True)
         print("",end="",flush=True)
 
+def  trans_bengali_to_english(txt):
+      english = translate(txt,"en-us")
+      return english
 
 
 
