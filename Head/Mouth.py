@@ -35,3 +35,19 @@ def play_audio(file_path):
     except Exception as e:
         print(f"Audio play error: {e}")
 
+
+async def amain(text, output):
+    try:
+        communicate = edge_tts.Communicate(text, VOICE)
+        await communicate.save(output)
+
+        # ✅ normal function call
+        play_audio(output)
+
+    except Exception as e:
+        print(f"TTS error: {e}")
+
+    finally:
+        remove_file(output)
+
+
