@@ -51,3 +51,12 @@ async def amain(text, output):
         remove_file(output)
 
 
+def speak(text, output=None):
+    if output is None:
+        output = os.path.join(os.getcwd(), "speak.mp3")
+
+    asyncio.run(amain(text, output))
+
+
+# TEST
+speak("Welcome to jarvis world")
