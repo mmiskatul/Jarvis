@@ -30,7 +30,7 @@ def recognize_with_timeout(recognizer, audio, result_holder):
 def listen():
     recognizer = sr.Recognizer()
 
-    recognizer.energy_threshold = 3000
+    recognizer.energy_threshold = 2000
     recognizer.dynamic_energy_threshold = True
     recognizer.pause_threshold = 1.0
     recognizer.non_speaking_duration = 0.6
